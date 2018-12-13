@@ -86,3 +86,72 @@ for (let i = 0; i < ninTurt.length; i++){
 // }
 // strcon();
 
+const kristynsCloset = [
+    "left shoe",
+    "cowboy boots",
+    "right sock",
+    "GA hoodie",
+    "green pants",
+    "yellow knit hat",
+    "marshmallow peeps"
+  ];
+  
+  // Thom's closet is more complicated. Check out this nested data structure!!
+  const thomsCloset = [
+    [
+      // These are Thom's shirts
+      "grey button-up",
+      "dark grey button-up",
+      "light blue button-up",
+      "blue button-up",
+    ],[
+      // These are Thom's pants
+      "grey jeans",
+      "jeans",
+      "PJs"
+    ],[
+      // Thom's accessories
+      "wool mittens",
+      "wool scarf",
+      "raybans"
+    ]
+  ];
+
+const kristynsShoe = kristynsCloset[0];
+thomsCloset[2].push(kristynsShoe);
+console.log(thomsCloset[2]);
+
+function dressThom() {
+const thomsStyle = [];
+    for (i = 0; i < thomsCloset.length; i++){
+        let thomsItem = thomsCloset[i];
+        let ran = Math.round(Math.random() * (thomsItem.length -1));
+        // console.log(ran);
+        thomsStyle.push(thomsItem[ran]);
+    }
+    console.log(`Today Thom will wear ${thomsStyle[0]}, ${thomsStyle[1]} and ${thomsStyle[2]}!`);
+}
+dressThom();
+dressThom();
+dressThom();
+
+// console.log(`On Monday Thom will be wearing a ${thomsCloset[0][0]}, ${thomsCloset[1][0]} and ${thomsCloset[2][2]}`);
+// console.log(`On Tuesday Thom will be wearing a ${thomsCloset[0][1]}, ${thomsCloset[1][1]} and ${thomsCloset[2][1]}`);
+// console.log(`On Wednesday Thom will be wearing a ${thomsCloset[0][3]}, ${thomsCloset[1][2]} and ${thomsCloset[2][0]}`);
+function dressKrys() {
+    let ran1 = Math.round(Math.random() * kristynsCloset.length);
+    const kristynsStyle = [];
+    if (ran1 === false) {
+        console.log(`Today Kristyn is going naked!!`);
+    } else {
+    for (i=0; i<=ran1; i++){
+        
+        kristynsStyle.push(kristynsCloset[i]);
+    }
+    }
+    let kristynsClothes = kristynsStyle.join(" and ");
+    console.log(`Today Kristyn has decided to wear ${kristynsClothes}`);
+}
+dressKrys();
+dressKrys();
+dressKrys();
