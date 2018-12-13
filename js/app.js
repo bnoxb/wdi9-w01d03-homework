@@ -141,13 +141,11 @@ dressThom();
 function dressKrys() {
     let ran1 = Math.round(Math.random() * kristynsCloset.length);
     const kristynsStyle = [];
-    if (ran1 === false) {
-        console.log(`Today Kristyn is going naked!!`);
-    } else {
+
     for (i=0; i<=ran1; i++){
         
         kristynsStyle.push(kristynsCloset[i]);
-    }
+    
     }
     let kristynsClothes = kristynsStyle.join(" and ");
     console.log(`Today Kristyn has decided to wear ${kristynsClothes}`);
@@ -155,3 +153,11 @@ function dressKrys() {
 dressKrys();
 dressKrys();
 dressKrys();
+
+for (i = 0; i < kristynsCloset.length; i++){
+    console.log(`WHIRR: Now washing ${kristynsCloset[i]}!`);
+}
+
+for (i = 0; i < thomsCloset.length; i++) {
+    console.log(thomsCloset[i]);
+}
