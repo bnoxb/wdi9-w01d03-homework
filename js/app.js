@@ -39,3 +39,50 @@ ryan[2] = "Gotham City";
 reuben.splice(2, 1, "Chicago");
 jim.splice(2, 1, "Denver", "Tamarindo","London");
 jim.splice(2, 1);
+
+const ninTurt = ['Donatello', 'Leonardo', 'Raphael', 'Michaelangelo'];
+
+
+for (let i = 0; i < ninTurt.length; i++){
+    let thisTurt = ninTurt[i].split("");
+        for (let t = 0; t < thisTurt.length; t+=2){
+            thisTurt[t] = thisTurt[t].toUpperCase();
+            console.log(thisTurt[t]);
+        }
+    let joinTurt = thisTurt.join("");
+    ninTurt[i] = joinTurt;
+    console.log(ninTurt);
+}
+
+//Heres how I figured it out...
+
+// for (let i = 0; i < ninTurt.length; i++){
+//     const turtLimbo = [];
+//     let thisTurt = ninTurt[i].split("");
+//         for (let t = 0; t < thisTurt.length; t++){
+//             let thisTurtLetter = thisTurt[t];
+//             if(t % 2 === 0){
+//                 turtLimbo.push(thisTurtLetter.toUpperCase());
+//                 console.log(turtLimbo);
+//             } else {
+//                 turtLimbo.push(thisTurtLetter);
+//             }
+//         }
+//     console.log(turtLimbo.join(""));
+// }
+// console.log(ninTurt);
+
+// function strcon() {
+//     var b = '';
+//     var a = "This Is A Sample String";
+//     for (i = 0; i < a.length; i++) {
+//         if (a.charCodeAt(i) >= 65 && a.charCodeAt(i) <= 90) {
+//             b = b + a.charAt(i).toLowerCase();
+//         }
+//         else
+//             b = b + a.charAt(i).toUpperCase();
+//     }
+//     console.log(b);
+// }
+// strcon();
+
